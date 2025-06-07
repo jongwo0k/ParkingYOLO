@@ -1,0 +1,58 @@
+# google drive mount or local upload dataset -> colab
+# dataset from roboflow parking space 3,4 by parkinglotdetectionteamcentaurus, Car_segmentation by vince0404
+# License: CC BY 4.0
+
+!pip install ultralytics
+
+import os
+import zipfile
+from ultralytics import YOLO
+from google.colab import drive
+
+# 드라이브에서 colab으로 데이터셋 load, 압축 해제
+drive.mount('/content/drive')
+!unzip /content/drive/MyDrive/.zip or dataset file -d /content/dataset
+
+zip_path = '/content/.zip'
+extract_path = '/content/dataset'
+
+with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+    zip_ref.extractall(extract_path)
+
+# 압축 해제된 폴더, 파일 확인
+!ls /content/dataset
+# result example: 
+data.yaml  README.dataset.txt  README.roboflow.txt  test  train  valid
+
+!cat /content/dataset/data.yaml
+# result example:
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+nc: 2
+names: ['occupied', 'vacant'] or ['car']
+
+roboflow:
+  workspace: parkinglotdetectionteamcentaurus, vince0404, ...
+  project: 
+  version: 
+  license: 
+  url:
+
+# 모델 정의, 학습 진행
+model = YOLO('yolov8n-seg.pt') # or yolo8n.pt (detection)
+
+model.train(
+    data='/content/dataset/data.yaml',
+    epochs=50,
+    imgsz=640,
+    batch=8,
+    name='your folder',
+    task='segment' # or detect
+)
+
+# 모델 저장
+download your best.pt
+or
+from google.colab import files
+files.download()
