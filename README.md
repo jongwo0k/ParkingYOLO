@@ -26,9 +26,11 @@ keyboard 방향키 사용
 up, down : 전진, 후진
 left, right : 회전
 
-# play
+# Gameplay Demo
 ![playDemo](./playDemo/playSample1_1.gif)
 
+![playDemo](./playDemo/playSample2_1.gif)
+
 # Reference
-roboflow dataset
+roboflow dataset parking space 3,4 by parkinglotdetectionteamcentaurus, Car_segmentation by vince0404
 Ultralytics YOLOv8
