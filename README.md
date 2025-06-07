@@ -27,6 +27,7 @@ up, down : 전진, 후진
 left, right : 회전
 
 # play
+[![playDemo](./playDemo/move1.png)](./playDemo/playSample1.mp4)
 
 # Reference
 roboflow dataset
