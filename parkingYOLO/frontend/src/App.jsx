@@ -122,8 +122,6 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [destinationBox, isGameOver, carCandidates, occupiedBoxes, selectedCarIndex, startingBox]);
 
-  
-
   // UI 렌더링
   return (
     <div style={{
