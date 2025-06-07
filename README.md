@@ -88,15 +88,11 @@ Pillow
 
 ## run
 
-backend/python app.py
+comman prompt: /parkingYOLO/backend/python app.py
 
-new command prompt
+new command prompt: /parkingYOLO/frontend/npm run dev
 
-frontend/npm run dev
-
-web browser
-
-http://localhost:5173
+web browser: http://localhost:5173
 
 # 개선점 및 발전 방향
 
