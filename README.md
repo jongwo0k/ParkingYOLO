@@ -25,7 +25,9 @@ cartoon style, 실제 촬영한 이미지 모두 가능(sampleMap1,2)
 
 # 조작법
 
-keyboard 방향키 사용
+mouse click으로 빨간 박스 안의 차량 중 하나 선택
+
+keyboard 방향키 사용해서 조종
 
 up, down : 전진, 후진
 
@@ -35,6 +37,15 @@ left, right : 회전
 ![playDemo](./playDemo/playSample1_1.gif)
 
 ![playDemo](./playDemo/playSample2_1.gif)
+
+# 개선 필요
+
+top view가 아닌 이미지의 경우 사용하기 어려움 (getPerspectiveTransform, warpPerspective 사용 고려)
+
+car만 정확히 자르지 못할 경우(ex : 대각선) 차량 움직임이 자연스럽지 못함
+
+이미지 내에 detect되지 않는 장애물은 충돌 처리 불가
+
 
 # Reference
 roboflow dataset parking space 3,4 by parkinglotdetectionteamcentaurus, Car_segmentation by vince0404
