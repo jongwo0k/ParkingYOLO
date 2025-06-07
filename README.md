@@ -49,15 +49,15 @@ flask 서버의 YOLOv8 모델이 업로드한 이미지에서 object detection �
 
 탐지한 object, 신뢰도, angle을 저장해 frontend에서 사용
 
--model1 : car segmentation 단일 class 탐지 신뢰도 기준 상위 3개의 차량으로 플레이 가능, 빨간 박스로 표시 나머지는 충돌 시 감점되는 장애물로 사용
+- model1 : car segmentation 단일 class 탐지 신뢰도 기준 상위 3개의 차량으로 플레이 가능, 빨간 박스로 표시 나머지는 충돌 시 감점되는 장애물로 사용
 
--model2 : occupied, vacant 2개 class 탐지 occupied는 모두 충돌 시 감점되는 장애물로 사용, 1개의 vacant는 destination, 초록 박스로 표시
+- model2 : occupied, vacant 2개 class 탐지 occupied는 모두 충돌 시 감점되는 장애물로 사용, 1개의 vacant는 destination, 초록 박스로 표시
 
 업로드하는 이미지의 크기는 각각 다를 수 있기에 캔버스 크기 비율에 맞춰서 다시 그림
 
--YOLO가 이미지에서 detection한 실제 좌표와 사용자가 보게 될 반응형 canvas 좌표 통일
+- YOLO가 이미지에서 detection한 실제 좌표와 사용자가 보게 될 반응형 canvas 좌표 통일
 
--마우스 클릭 좌표가 canvas내의 같은 위치를 가리키도록 보정
+- 마우스 클릭 좌표가 canvas내의 같은 위치를 가리키도록 보정
 
 carController, useEffect로 맵에서 캐릭터의 이동, 회전하는 움직임 업데이트, 시각화
 
@@ -71,7 +71,7 @@ destination box에 캐릭터가 도달하면 게임 종료, 최종 Score 표시,
 
 새로운 이미지를 업로드하면 초기화, 다른 맵에서 플레이 가능
 
-# 개선 필요
+# 개선점 및 발전 방향
 
 top view가 아닌 이미지의 경우 사용하기 어려움 (getPerspectiveTransform, warpPerspective 사용 고려)
 
@@ -82,6 +82,6 @@ car만 정확히 자르지 못할 경우(ex : 대각으로 주차된 차량) 캐
 
 # Reference
 
-roboflow dataset parking space 3,4 by parkinglotdetectionteamcentaurus, Car_segmentation by vince0404
+Roboflow dataset parking space 3,4 by parkinglotdetectionteamcentaurus, Car_segmentation by vince0404
 
 Ultralytics YOLOv8
