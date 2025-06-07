@@ -7,7 +7,8 @@ A game where you control and park a car detected by YOLO in the uploaded map ima
 2개의 YOLO 모델 사용
 - carSeg : 차량을 감지, 사용자 캐릭터로 선택 가능
 - parkingLot : 주차장 공간을 감지(이미 주차되어 있는 공간occupied, 빈 공간vacant)
-- 신뢰도 기준으로 car 3대, destination(vacant) 1곳 표시
+
+신뢰도 기준으로 car 3대, destination(vacant) 1곳 표시
 
 YOLO가 detect한 이미 주차되어 있는 공간occupied, 선택되지 않은 차량에 충돌 시 감점
 
