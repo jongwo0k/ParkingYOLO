@@ -71,6 +71,23 @@ destination box에 캐릭터가 도달하면 게임 종료, 최종 Score 표시,
 
 새로운 이미지를 업로드하면 초기화, 다른 맵에서 플레이 가능
 
+# requirements
+
+Flask
+Flask-Cors
+numpy
+opencv-python
+ultralytics
+Pillow
+
+## run
+
+backend/python app.py
+new command prompt
+frontend/npm run dev
+web browser
+http://localhost:5173
+
 # 개선점 및 발전 방향
 
 top view가 아닌 이미지의 경우 사용하기 어려움 (getPerspectiveTransform, warpPerspective 사용 고려)
