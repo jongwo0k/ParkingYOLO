@@ -86,7 +86,7 @@ ultralytics
 Pillow
 
 
-## run
+## Run
 
 comman prompt: /parkingYOLO/backend/python app.py
 
