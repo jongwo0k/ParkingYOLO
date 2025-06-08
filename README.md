@@ -41,7 +41,7 @@ left, right : 회전
 
 # 동작 설명
 
-car 단일 class의 yolo1, occupied, vacant 2개 class의 yolo2 학습
+car 단일 class의 model1(carSeg.pt), occupied, vacant 2개 class의 model2(parkingLot.pt) 학습
 
 사용자가 Upload Your Map버튼을 눌러 맵으로 사용할 이미지 upload
 
@@ -71,7 +71,7 @@ destination box에 캐릭터가 도달하면 게임 종료, 최종 Score 표시,
 
 새로운 이미지를 업로드하면 초기화, 다른 맵에서 플레이 가능
 
-## requirements
+## Requirements
 
 Flask
 
@@ -105,6 +105,6 @@ car만 정확히 자르지 못할 경우(ex : 대각으로 주차된 차량) 캐
 
 # Reference
 
-Roboflow dataset parking space 3,4 by parkinglotdetectionteamcentaurus, Car_segmentation by vince0404
+Roboflow dataset: parking space 3,4 by parkinglotdetectionteamcentaurus, Car_segmentation by vince0404
 
 Ultralytics YOLOv8
